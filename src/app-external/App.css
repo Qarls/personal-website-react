@@ -1,0 +1,171 @@
+.App {
+  text-align: center;
+}
+
+label {
+  color: slategray;
+  align-self: center;
+  font-weight: 200;
+  font-size: 0.9rem;
+
+
+}
+input {
+  background-color: slategray;
+  border-radius: 2.5rem;
+  font-size: 1.5rem;
+  color: #404246;
+  padding: 0.2rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  text-justify: center;
+  text-align: center;
+  max-width: 6rem;
+  margin-top: 2rem;
+  margin-right: 2rem;
+  border-width: 0.1rem;
+  border-color: slategrey;
+  cursor: pointer;
+  
+  
+  
+}
+input::placeholder {
+  color: rgb(87, 93, 97);
+  font-weight: 200;
+}
+button.startbutton {
+  border-width: 0.1rem;
+  border-color: mediumseagreen;
+}
+
+button.stopbutton {
+  border-width: 0.1rem;
+  border-color: crimson;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.counter {
+  margin-top: 1rem;
+}
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.App {
+  text-align: center;
+}
+
+label {
+  color: slategray;
+  align-self: center;
+  font-weight: 200;
+  font-size: 0.9rem;
+
+
+}
+input {
+  background-color: slategray;
+  border-radius: 2.5rem;
+  font-size: 1.5rem;
+  color: #404246;
+  padding: 0.2rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  text-justify: center;
+  text-align: center;
+  max-width: 6rem;
+  margin-top: 2rem;
+  margin-right: 2rem;
+  border-width: 0.1rem;
+  border-color: slategrey;
+  cursor: pointer;
+  
+  
+  
+}
+input::placeholder {
+  color: rgb(87, 93, 97);
+  font-weight: 200;
+}
+button.startbutton {
+  border-width: 0.1rem;
+  border-color: mediumseagreen;
+}
+
+button.stopbutton {
+  border-width: 0.1rem;
+  border-color: crimson;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.counter {
+  margin-top: 1rem;
+}
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

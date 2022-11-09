@@ -1,0 +1,16 @@
+p {
+    font-size: 44vh;
+    margin: 0px;
+    margin-bottom: auto;
+    color: slategrey;
+
+}
+
+p.main-display {
+   min-height: 44vh;
+}
+p.bottom-text {
+    font-size: 0.8rem;
+    margin-top: 0.8rem;
+    margin-bottom: auto;
+}
