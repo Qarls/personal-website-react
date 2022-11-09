@@ -1,5 +1,5 @@
 p {
-    font-size: 44vh;
+    font-size: 12rem;
     margin: 0px;
     margin-bottom: auto;
     color: slategrey;
@@ -7,10 +7,11 @@ p {
 }
 
 p.main-display {
-   min-height: 44vh;
+   min-height: 12rem;
 }
 p.bottom-text {
     font-size: 0.8rem;
     margin-top: 0.8rem;
     margin-bottom: auto;
+    padding-bottom: 0.2rem;
 }
