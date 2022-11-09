@@ -1,3 +1,17 @@
-body {
+div.header {
+  min-height: 7vh;
+}
+
+div.navbar {
+  min-height: 4vh;
+}
+
+div.container {
+  display: flex;
+}
+
+button.nav {
+  flex: 0 0 auto;
+  margin: auto;
   
 }

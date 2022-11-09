@@ -1,7 +1,5 @@
 div.app-container {
-  margin-left: 65vw;
-  margin-bottom: 10vh;
-  margin-top: 20vh;
+  margin-top: 13vh;
   font-family: 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -9,7 +7,7 @@ div.app-container {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   background-color: #3e4553;
-  max-width: 44vh;
+  width: 44vh;
   border-radius: 8px;
   border-style: solid;
 }

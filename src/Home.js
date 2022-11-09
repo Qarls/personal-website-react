@@ -1,6 +1,8 @@
 import './Home.css';
 import './app-external/App.css'
-import App from './app-external/App'
+import Container from './Container';
+import Navbar from './Navbar';
+import Header from './Header';
 
 function Home() {
   return (
@@ -9,8 +11,9 @@ function Home() {
     //TODO: <Footer />
     //TODO: <Sidebar /> ?
     <>
-      
-      <App />
+      <Header />
+      <Navbar /> 
+      <Container />
     </>
   );
 }
