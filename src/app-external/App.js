@@ -40,9 +40,9 @@ const elementArray = BASE_ALPHABET.map((element) => {
 })
 const arrayLen = elementArray.length
   return (
-    <>
+    <div className='app-container'>
       <Picker style={style} elementArray={elementArray} arrayLen={arrayLen}/>
-    </>
+    </div>
   );
 }
 

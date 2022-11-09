@@ -4,7 +4,12 @@ import App from './app-external/App'
 
 function Home() {
   return (
+    //TODO: <Navbar />
+    //TODO: <Viewcontainer />
+    //TODO: <Footer />
+    //TODO: <Sidebar /> ?
     <>
+      
       <App />
     </>
   );
