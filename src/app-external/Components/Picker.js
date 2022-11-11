@@ -59,7 +59,7 @@ const Picker = ({style, elementArray, arrayLen}) => {
 
   return (
     <>
-      <button onClick={handleRunClick} className={isRunning ? 'startbutton' : 'stopbutton'}>{isRunning ? 'Start' : 'Stop'}</button>
+      <button id='startstop' onClick={handleRunClick} className={isRunning ? 'startbutton' : 'stopbutton'}>{isRunning ? 'Start' : 'Stop'}</button>
       <Letter currentElement={currentElement - 1} elementArray={elementArray} />
       <label htmlFor='speed'>Speed: </label>
       <input type='number' id='speed' onChange={handleChange} placeholder='199'></input>

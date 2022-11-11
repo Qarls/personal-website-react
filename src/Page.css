@@ -1,0 +1,26 @@
+.start-page {
+    display: grid;
+    grid-template-columns: repeat(3, 33vw);
+    grid-template-rows: repeat(7, 14vh)
+    
+}
+
+.center-text {
+    grid-column: 1 / 4;
+    grid-row: 3 / 4;
+    text-align: center;
+    font-size: 6rem;
+    color: azure;
+    letter-spacing: 1.3rem;
+}
+p.main-text {
+    margin: 5vh;
+    margin-bottom: 2vh;
+    font-weight: 1;
+    letter-spacing: 1rem;
+
+}
+p.sub-text {
+    font-size: 3rem;
+    margin-top: 0px;
+}
