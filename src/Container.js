@@ -1,6 +1,8 @@
 import React from 'react'
 import App from './app-external/App'
-import Page from './Page';
+import HomePage from './HomePage';
+import AboutPage from './AboutPage';
+import ContactPage from './ContactPage';
 import './Container.css' 
 
 //this component will contain the contents of the currently displayed page
@@ -9,13 +11,18 @@ function Container({ views, view }) {
 
   function viewController() {
     if (view === views.start) {
-      return Page();
+      return HomePage();
     }
     else if (view === views.gallery) {
-      return App()
+      return App();
     }
-    
-
+    else if (view === views.about) {
+      return AboutPage();
+    }
+    else if (view === views.contact) {
+      return ContactPage();
+    }
+    else return HomePage();
   }
 
   return (

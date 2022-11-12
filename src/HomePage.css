@@ -9,7 +9,7 @@
     grid-column: 1 / 4;
     grid-row: 3 / 4;
     text-align: center;
-    font-size: 6rem;
+    font-size: 6vh;
     color: azure;
     letter-spacing: 1.3rem;
 }
@@ -21,6 +21,6 @@ p.main-text {
 
 }
 p.sub-text {
-    font-size: 3rem;
+    font-size: 3vh;
     margin-top: 0px;
 }

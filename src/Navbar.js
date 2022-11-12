@@ -15,7 +15,7 @@ const Navbar = () => {
     console.log(e.target.id)
     switch (e.target.id) {
       case 'about':
-        setView(prevView => views.start)
+        setView(prevView => views.about)
         break
       case 'gallery':
         setView(prevView => views.gallery)
