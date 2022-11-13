@@ -5,9 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: url('./res/bg2.jpg');
   background-size: cover;
-  background-color: #2d3447;
   height: 100vh;
   width: 100vw;
 }
@@ -15,4 +13,9 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+#main {
+  height: 100vh;
+  background-size: cover;
 }
