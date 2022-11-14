@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/static/css/main.fbdfe677.css",
-    "main.js": "/static/js/main.893ab359.js",
-    "static/media/bg2.jpg": "/static/media/bg2.9b9d2d5ce9274803bd97.jpg",
-    "static/media/IMG_4848.JPEG": "/static/media/IMG_4848.b912ad48e5d3442017c7.JPEG",
-    "static/media/8541742_circle_icon.png": "/static/media/8541742_circle_icon.0b3edd29f2b29c6dcc56.png",
-    "static/media/social-iconsgh.png": "/static/media/social-iconsgh.728ee58d8f1e02c685a1.png",
-    "static/media/social-iconsmail.png": "/static/media/social-iconsmail.9a01ca359356290383cb.png",
-    "static/media/social-iconsin.png": "/static/media/social-iconsin.bd00caaf3a0fc463f36c.png",
-    "static/media/social-iconsfb.png": "/static/media/social-iconsfb.b3a7d4096da6728fc03b.png",
-    "index.html": "/index.html",
-    "main.fbdfe677.css.map": "/static/css/main.fbdfe677.css.map",
-    "main.893ab359.js.map": "/static/js/main.893ab359.js.map"
+    "main.css": "/personal-website-react/static/css/main.fbdfe677.css",
+    "main.js": "/personal-website-react/static/js/main.e47e1758.js",
+    "static/media/bg2.jpg": "/personal-website-react/static/media/bg2.9b9d2d5ce9274803bd97.jpg",
+    "static/media/IMG_4848.JPEG": "/personal-website-react/static/media/IMG_4848.b912ad48e5d3442017c7.JPEG",
+    "static/media/8541742_circle_icon.png": "/personal-website-react/static/media/8541742_circle_icon.0b3edd29f2b29c6dcc56.png",
+    "static/media/social-iconsgh.png": "/personal-website-react/static/media/social-iconsgh.728ee58d8f1e02c685a1.png",
+    "static/media/social-iconsmail.png": "/personal-website-react/static/media/social-iconsmail.9a01ca359356290383cb.png",
+    "static/media/social-iconsin.png": "/personal-website-react/static/media/social-iconsin.bd00caaf3a0fc463f36c.png",
+    "static/media/social-iconsfb.png": "/personal-website-react/static/media/social-iconsfb.b3a7d4096da6728fc03b.png",
+    "index.html": "/personal-website-react/index.html",
+    "main.fbdfe677.css.map": "/personal-website-react/static/css/main.fbdfe677.css.map",
+    "main.e47e1758.js.map": "/personal-website-react/static/js/main.e47e1758.js.map"
   },
   "entrypoints": [
     "static/css/main.fbdfe677.css",
-    "static/js/main.893ab359.js"
+    "static/js/main.e47e1758.js"
   ]
 }
