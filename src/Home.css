@@ -44,15 +44,28 @@ li {
   
 }
 
-.logo {
+li#logo {
   list-style: none;
-  margin-left: 1vw;
-  margin-right: 0px;
-  max-width: 5vw;
-  grid-column: 1 / 3;
-  grid-row: 1 / 4;
   
 }
+
+img#logo {
+  max-width: 75px;
+  position: absolute;
+  top: -10px;
+  left: 5px;
+}
+
+@media (max-width: 1000px) {
+  img#logo {
+    max-width: 35px;
+    top: 5px;
+
+  }
+  
+}
+
+
 
 button#about {
   background: none;

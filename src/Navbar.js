@@ -1,5 +1,6 @@
 import React, {useState, useEffect } from 'react'
 import Container from './Container';
+import logo from './res/8541742_circle_icon.png'
 
 const views = {
   start: 'start',
@@ -59,9 +60,9 @@ const Navbar = () => {
 
   return (
     <> 
+    <img id='logo' src={logo} alt='logo'></img>
     <div className='navbar' >
        <div className='bar'>
-          <div className='logo'>Logo</div>
           <ul className='bar'>
           <li id='start' onClick={handleClick} onMouseOver={{}}>START</li>
           <li id='about' onClick={handleClick}>ABOUT</li>
