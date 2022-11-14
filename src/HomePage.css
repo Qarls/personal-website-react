@@ -13,6 +13,19 @@
     color: azure;
     letter-spacing: 1vw;
 }
+p.sub-text {
+    font-size: 1.5vw;
+    margin-top: 0px;
+}
+@media (max-width: 600px) {
+    .center-text {
+        font-size: 4vh;
+    }
+    p.sub-text {
+        font-size: 1.5vh;
+    }
+    
+}
 p.main-text {
     margin: 5vh;
     margin-bottom: 2vh;
@@ -20,7 +33,4 @@ p.main-text {
     letter-spacing: 1vw;
 
 }
-p.sub-text {
-    font-size: 1.5vw;
-    margin-top: 0px;
-}
+

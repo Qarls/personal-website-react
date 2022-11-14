@@ -61,7 +61,7 @@ button#about {
 #about-page {
   display: grid;
   grid-template-columns: repeat(10, 10vw);
-  grid-template-rows: repeat(11, 10vh);
+  grid-template-rows: repeat(10, 10vh);
   color: azure;
 }
 
@@ -77,7 +77,7 @@ button#about {
 }
 
 #my-skills {
-  grid-column: 2 / 10;
+  grid-column: 2 / 7;
   grid-row: 6 / 9;
   margin: 0px;
   
@@ -126,12 +126,44 @@ img {
   grid-row: 2 / 5;
   margin-top: 20px;
   max-height: 30vh;
-  margin-left: 5vw;
+  position: relative;
 
 
 }
 hr {
   border: 2px solid #250404
+}
+
+@media (max-width: 1000px) {
+  #my-skills, #hr {
+    grid-row: 10 / auto;
+
+  }
+  img {
+    max-width: 30vw;
+    position: relative;
+    left: 5vw;
+  }
+  div.bar {
+    position: relative;
+    right: 5vw;
+  }
+  #about-page {
+    grid-template-rows: repeat(15, 10vh)
+  }
+  
+}
+
+@media (min-width: 1001px) {
+  img {
+    position: relative;
+    left: 5vw;
+  }
+  #scroll-me {
+    visibility: hidden;
+  }
+
+  
 }
 
 

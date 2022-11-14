@@ -6,17 +6,19 @@ const AboutPage = () => {
     <div id='about-page'>
       <img src={image}></img>
       <div id='about-me'>
-      <p>My name is <b><span style={{color: '#811111'}}>Karol Stachowicz</span></b> and I'm a self-taught developer. 
-      I currently specialize in creating web applications using React, however the most important skill I've 
-      learned during my two-year programming journey is not really a particular framework or language, but the ability to learn
-      and solve problems on my own. </p> <p>My passion for anything computer did not, however, start just a few years back.
-      It's been there for as long as I can remember. I wrote my first program when I was 13 years old, but it took quite some time, 
-      including six years of medical university, for me to pick up programming as a career. </p><p>Before committing to front-end development I've been learning Python, some basics of C++ as well
-      as Linux, which I also picked up as a hobby.</p>
+        <p>My name is <b><span style={{color: '#811111'}}>Karol Stachowicz</span></b> and I'm a self-taught developer. 
+        I currently specialize in creating web applications using React, however the most important skill I've 
+        learned during my two-year programming journey is not really a particular framework or language, but the ability to learn
+        and solve problems on my own. </p> <p>My passion for anything computer did not, however, start just a few years back.
+        It's been there for as long as I can remember. I wrote my first program when I was 13 years old, but it took quite some time, 
+        including six years of medical university, for me to pick up programming as a career. </p><p>Before committing to front-end development I've been learning Python, some basics of C++ as well
+        as Linux, which I also picked up as a hobby.</p>
+
       </div>
       <div id='hr'>
+        <span id='scroll-me'>Scroll down</span>
        <hr />
-       </div>
+      </div>
       <div id='my-skills'>
 
         <p id='skills'>MY SKILLS:
