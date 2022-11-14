@@ -3,12 +3,13 @@ import App from './app-external/App'
 import HomePage from './HomePage';
 import AboutPage from './AboutPage';
 import ContactPage from './ContactPage';
+import Gallery from './Gallery';
 import './Container.css' 
 import bg from './bg2.jpg'
 
 
-const bgImage = "url('bg2.jpg')"
-
+const nextArrow = '>'
+const prevArrow = '<'
 //this component will contain the contents of the currently displayed page
 function Container({ views, view }) {
 
@@ -30,7 +31,7 @@ function Container({ views, view }) {
     }
     else if (view === views.gallery) {
       setColorBg();
-      return App();
+      return Gallery();
     }
     else if (view === views.about) {
       setColorBg();
@@ -50,9 +51,9 @@ function Container({ views, view }) {
   return (
     <>
       <div className='container' >
-        <button className={(view === views.gallery) ? 'nav' : 'hidden'} >1</button>
+        <button className={(view === views.gallery) ? 'nav' : 'hidden'} >{prevArrow}</button>
         <>{viewController()}</>
-        <button className={(view === views.gallery) ? 'nav' : 'hidden'} >2</button>
+        <button className={(view === views.gallery) ? 'nav' : 'hidden'} >{nextArrow}</button>
 
       </div>
     </>

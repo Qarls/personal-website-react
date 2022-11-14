@@ -15,12 +15,12 @@ const Navbar = () => {
 
   function setInitialPage() {
     
-    localStorage.setItem(LOCAL_STORAGE_KEY, view)
+    sessionStorage.setItem(LOCAL_STORAGE_KEY, view)
   }
 
   function setPage() {
 
-    return localStorage.getItem(LOCAL_STORAGE_KEY)
+    return sessionStorage.getItem(LOCAL_STORAGE_KEY)
   }
   let currentPage = localStorage.getItem(LOCAL_STORAGE_KEY)
   const [view, setView] = useState(setPage);

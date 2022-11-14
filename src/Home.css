@@ -13,6 +13,11 @@ div.container {
 button.nav {
   flex: 0 0 auto;
   margin: auto;
+  color: azure;
+  border: 2px solid azure;
+  background-color: black;
+  border-radius: 6px;
+
   
 }
 
@@ -147,6 +152,8 @@ img.social {
 }
 a {
   flex: 0 1 auto;
+  text-decoration: none;
+  color:#811111;
 }
 
 #contact-me {

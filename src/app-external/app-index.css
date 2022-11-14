@@ -19,7 +19,7 @@ button#startstop {
   color: #a0a7b1;
   margin-top: 2rem;
   background-color: #2a2d33;
-  border-radius: 2rem;
+  border-radius: 0.5rem;
   cursor: pointer;
 
 }
