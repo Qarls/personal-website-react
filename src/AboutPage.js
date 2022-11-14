@@ -4,7 +4,7 @@ import image from './res/IMG_4848.JPEG'
 const AboutPage = () => {
   return (
     <div id='about-page'>
-      <img src={image}></img>
+      <img src={image} alt='author'></img>
       <div id='about-me'>
         <p>My name is <b><span style={{color: '#811111'}}>Karol Stachowicz</span></b> and I'm a self-taught developer. 
         I currently specialize in creating web applications using React, however the most important skill I've 

@@ -3,7 +3,6 @@ import './HomePage.css'
 
 const mainText = 'KAROL STACHOWICZ'
 const subText = 'FRONTEND DEVELOPER'
-const blackLetters = 'OPER'
 const HomePage = () => {
   return (
     <div className='start-page'>
