@@ -12,13 +12,17 @@ div.container {
 
 button.nav {
   flex: 0 0 auto;
-  margin: auto;
   color: azure;
   border: 2px solid azure;
   background-color: black;
   border-radius: 6px;
 
   
+}
+
+.nav.placeholder {
+  border: 0px;
+  color: black;
 }
 
 .hidden {
@@ -174,6 +178,39 @@ a {
   visibility: hidden;
 
   margin-right: auto;
+}
+
+.gallery {
+  display: grid;
+  justify-self: center;
+  margin-left: auto;
+  margin-right: auto;
+  grid-template-rows: repeat(10, 10vh);
+  color: azure;
+}
+
+.gallery-container {
+  grid-row: auto / auto;
+  margin: 0px;
+  padding: 0px;
+}
+
+.gallery-buttons {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  grid-row: 8 / 8;
+  margin: 0px;
+  gap: 4vw;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+p.gallery-footer {
+  grid-row: 9 / auto;
+  text-align: center;
+  font-size: 1.5vh;
+  letter-spacing: 0.2vw;
 }
 
 @media (max-width: 1000px) {

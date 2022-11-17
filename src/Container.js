@@ -51,9 +51,7 @@ function Container({ views, view }) {
   return (
     <>
       <div className='container' >
-        <button className={(view === views.gallery) ? 'nav' : 'hidden'} >{prevArrow}</button>
         <>{viewController()}</>
-        <button className={(view === views.gallery) ? 'nav' : 'hidden'} >{nextArrow}</button>
 
       </div>
     </>

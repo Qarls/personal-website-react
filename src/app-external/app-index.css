@@ -1,6 +1,6 @@
 div.app-container {
-  margin-top: 13vh;
-  font-family: 'Roboto', 'Oxygen',
+  margin-top: 7vh;
+  font-family: 'Raleway', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -9,6 +9,8 @@ div.app-container {
   background-color: #3e4553;
   border-radius: 8px;
   border-style: solid;
+  flex: 1 0 auto;
+ 
 }
 
 button#startstop {
