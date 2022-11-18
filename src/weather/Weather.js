@@ -1,12 +1,11 @@
 import React, {useState, useEffect} from 'react'
 import brokenCloudsBg from '../res/brokenclouds.jpg';
-import keys from '../res/keys'
 
 
-const apiKeyString = JSON.stringify(keys);
-const apiKey = keys.openweathermap;
+const apiTest = require('../res/keys.json');
+const apiKeyTest = apiTest[0].openweathermap;
 
-const apiLink = `https://api.openweathermap.org/data/2.5/forecast?q=Warsaw&appid=${apiKey}`
+const apiLink = `https://api.openweathermap.org/data/2.5/forecast?q=Warsaw&appid=${apiKeyTest}`
 const Weather = () => {
 
   const [error, setError] = useState(null);
