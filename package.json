@@ -26,7 +26,7 @@
       "react-app/jest"
     ]
   },
-  "homepage": "https://qarls.github.io",
+  "homepage": "https://qarls.github.io/personal-website-react/",
   "browserslist": {
     "production": [
       ">0.2%",

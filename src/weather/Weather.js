@@ -1,9 +1,12 @@
 import React, {useState, useEffect} from 'react'
 import brokenCloudsBg from '../res/brokenclouds.jpg';
+import keys from '../res/keys'
 
 
-const apiKey = '42f706a1d07e1bfcb9079775cfbb7a6a';
-const apiLink = `http://api.openweathermap.org/data/2.5/forecast?q=Warsaw&appid=${apiKey}`
+const apiKeyString = JSON.stringify(keys);
+const apiKey = keys.openweathermap;
+
+const apiLink = `https://api.openweathermap.org/data/2.5/forecast?q=Warsaw&appid=${apiKey}`
 const Weather = () => {
 
   const [error, setError] = useState(null);
