@@ -32,20 +32,16 @@ const AboutPage = () => {
           <li>C++ basics</li>
         </ul>
         </p>
-        <p id='learning'>I'M CURRENTLY LEARNING:
+        <p id='learning'>I'M LEARNING:
           <ul className='skills'>
+            <li>Typescript</li>
             <li>Bootstrap</li>
             <li>Redux</li>
             <li>Node.js</li>
             <li>Express</li>
           </ul>
         </p>
-        <p id='courses'>I'VE COMPLETED:
-        <ul className='courses'>
-          <li>The Odin Project</li>
-          <li>Harvard CS50 online course</li>
-        </ul>
-        </p>
+        
       </div>
       
       
