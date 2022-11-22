@@ -7,7 +7,6 @@ let elementIndex = 0;
 
 
 const Picker = ({style, elementArray, arrayLen}) => {
-  console.log(elementArray)
   const [usedElements, updateUsedElements] = useState([])
   const [speed, setSpeed] = useState(199)
   const [isRunning, toggleRunning] = useState(true);

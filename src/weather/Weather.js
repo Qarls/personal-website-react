@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import brokenCloudsBg from '../res/brokenclouds.jpg';
+import Forecast from './Forecast';
 
 
 const apiTest = require('../res/keys.json');
@@ -29,13 +30,13 @@ const Weather = () => {
           setError(error);
         }
       )
-  }, [])
+  }, []) // empty array as second argument means that this effect will run only once
 
   const tempToCelsius = (temp) => {
     return Math.round(temp - 273.15);
   }
-
-  const setBackgroundImage = () => {
+//TODO
+  const setBackgroundImage = () => { 
     switch (items[0].weather[0].description) {
       case 'Clear':
         return 'clearSky.jpg';
@@ -73,6 +74,7 @@ const Weather = () => {
       <p>{city.name}, {city.country}</p>
       <p>{items[0].weather[0].description}</p>
       <p>{tempToCelsius(items[0].main.temp)}&#8451;</p>
+      <Forecast items={items}/>
     </div>
   )
 }

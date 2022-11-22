@@ -40,11 +40,9 @@ const Navbar = () => {
     switch (e.target.id) {
       case 'start':
         setView(prevView => views.start)
-        setInitialPage()
         break
       case 'about':
         setView(prevView => views.about)
-        setInitialPage()
         break
       case 'gallery':
         setView(prevView => views.gallery)

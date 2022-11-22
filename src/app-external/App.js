@@ -35,7 +35,6 @@ function App() {
 
 
 const elementArray = BASE_ALPHABET.map((element) => {
-  console.log(element)
   return {text: element, used: false}
 })
 const arrayLen = elementArray.length
