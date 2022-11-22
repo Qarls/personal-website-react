@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import brokenCloudsBg from '../res/brokenclouds.jpg';
+import overcastCloudsBg from '../res/overcastClouds.jpg';
 import Forecast from './Forecast';
 
 
@@ -13,6 +14,8 @@ const Weather = () => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [city, setCity] = useState('');
   const [items, setItems] = useState([]);
+  const [time, setTimeString] = useState('');
+  const [date, setDateString] = useState('');
 
   useEffect(() => {
     fetch(apiLink)
@@ -23,6 +26,11 @@ const Weather = () => {
           console.log(result);
           setCity(result.city);
           setItems(result.list);
+          setTimeString(result.list[0].dt_txt.slice(11, 16));
+          console.log(time)
+          setDateString(result.list[0].dt_txt.slice(0, 10));
+
+          
         },
 
         (error) => {
@@ -42,6 +50,8 @@ const Weather = () => {
         return 'clearSky.jpg';
       case 'broken clouds':
         return brokenCloudsBg;
+      case 'overcast clouds':
+        return overcastCloudsBg;
       case 'Rain':
         return 'rain.jpg';
       case 'Snow':
@@ -69,12 +79,12 @@ const Weather = () => {
   }
     else {
       return (
-    <div className='weather' style={{backgroundImage: {setBackgroundImage}}}>
-      <p>{items[0].dt_txt}</p>
-      <p>{city.name}, {city.country}</p>
-      <p>{items[0].weather[0].description}</p>
-      <p>{tempToCelsius(items[0].main.temp)}&#8451;</p>
-      <Forecast items={items}/>
+    <div className='weather' style={{backgroundImage: `url(${setBackgroundImage()})`, backgroundSize: 'contain'}}>
+      <p className='weather-item' id='datetime-txt'>{date} {time}</p>
+      <p className='weather-item'>{city.name}, {city.country}</p>
+      <p className='weather-item'>{items[0].weather[0].description}</p>
+      <p className='weather-item'>{tempToCelsius(items[0].main.temp)}&#8451;</p>
+      <Forecast items={items} time={time} tempToCelsius={tempToCelsius}/>
     </div>
   )
 }

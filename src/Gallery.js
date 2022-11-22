@@ -2,7 +2,6 @@ import React, {useState, useEffect} from 'react'
 import App from './app-external/App'
 import Weathercontainer from './weather/Weathercontainer'
 
-
 const APPS = [
   <App />,
   <Weathercontainer />,
@@ -11,7 +10,6 @@ const APPS = [
 const CURRENT_APP_KEY = 'currentApp';
 
 const Gallery = () => {
-
 
 const getCurrentApp = () => {
   
@@ -26,9 +24,6 @@ const getApp = () => {
 } 
 
 const [app, setApp] = useState(Number(getApp()));
-
-
-
 
 useEffect(() => {
   getCurrentApp()
