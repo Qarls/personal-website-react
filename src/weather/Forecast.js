@@ -3,7 +3,7 @@ import React from 'react'
 
 //function to return 5 divs with class name 'hourly-item'
 
-const Forecast = ({items, time, tempToCelsius}) => {
+const Forecast = ({items, time, tempToCelsius, fontColor}) => {
 const timeIntervals = ['00:00', '03:00', '06:00', '09:00', '12:00', '15:00', '18:00', '21:00']
 const currentTime = timeIntervals.indexOf(time)
 
@@ -18,7 +18,7 @@ function hourlyDivs() {
     }
     cursor++;
     time = timeIntervals[cursor].slice(0, 2)    
-    divs.push(<div key={i} className='hourly-item'>{time}</div>)
+    divs.push(<div key={i} className={`weather-item ${fontColor}`}>{time}</div>)
   }
 
   return divs
@@ -38,17 +38,23 @@ function hourlyTemps() {
 }
 
   return (
-    <div className='forecast' id='forecast-container'>
-        <div className='forecast' id='forecast-hourly'>
+    <div className={`weather-item ${fontColor.current}`} id='forecast-container'>
+        <div className={`weather-item ${fontColor.current}`} id='forecast-hourly'>
             {hourlyDivs()}
             
 
         </div>
-        <div className='forecast' id='forecast-temps'>
+        <div className={`weather-item ${fontColor.current}`} id='forecast-temps'>
             {hourlyTemps()}
         </div>
     </div>
   )
 }
+
+//set default props for fontColor
+Forecast.defaultProps = {
+    fontColor: 'light'
+}
+
 
 export default Forecast

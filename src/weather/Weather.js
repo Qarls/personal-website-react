@@ -1,7 +1,10 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState, useEffect, useRef} from 'react'
 import brokenCloudsBg from '../res/brokenclouds.jpg';
 import overcastCloudsBg from '../res/overcastClouds.jpg';
 import Forecast from './Forecast';
+import clear from '../res/clear.jpg';
+import rain from '../res/rain.jpg';
+import snow from '../res/snow.jpg';
 
 
 const apiTest = require('../res/keys.json');
@@ -16,6 +19,8 @@ const Weather = () => {
   const [items, setItems] = useState([]);
   const [time, setTimeString] = useState('');
   const [date, setDateString] = useState('');
+  const fontColor = useRef('light');
+  
 
   useEffect(() => {
     fetch(apiLink)
@@ -43,19 +48,24 @@ const Weather = () => {
   const tempToCelsius = (temp) => {
     return Math.round(temp - 273.15);
   }
-//TODO
+//TODO: add all images
   const setBackgroundImage = () => { 
     switch (items[0].weather[0].description) {
-      case 'Clear':
-        return 'clearSky.jpg';
+      case 'clear':
+        fontColor.current = 'dark';
+        return clear;
       case 'broken clouds':
+        fontColor.current = 'dark';
         return brokenCloudsBg;
       case 'overcast clouds':
+        fontColor.current = 'dark';
         return overcastCloudsBg;
-      case 'Rain':
-        return 'rain.jpg';
-      case 'Snow':
-        return 'snow.jpg';
+      case 'rain' || 'light rain' || 'drizzle':
+        fontColor.current = 'light';
+        return rain;
+      case 'snow' || 'light snow':
+        fontColor.current = 'light';
+        return snow;
       case 'Thunderstorm':
         return 'thunderstorm.jpg';
       case 'Drizzle':
@@ -68,6 +78,9 @@ const Weather = () => {
         return brokenCloudsBg;
     }}
 
+const setBackgroundImageTest = () => {
+  return snow;
+}
 
 
   
@@ -79,12 +92,13 @@ const Weather = () => {
   }
     else {
       return (
-    <div className='weather' style={{backgroundImage: `url(${setBackgroundImage()})`, backgroundSize: 'contain'}}>
-      <p className='weather-item' id='datetime-txt'>{date} {time}</p>
-      <p className='weather-item'>{city.name}, {city.country}</p>
-      <p className='weather-item'>{items[0].weather[0].description}</p>
-      <p className='weather-item'>{tempToCelsius(items[0].main.temp)}&#8451;</p>
-      <Forecast items={items} time={time} tempToCelsius={tempToCelsius}/>
+//CHECK IF NOT PASSING THE TEST FUNCTION BEFORE PUSHING TO PRODUCTION
+    <div className='weather' style={{backgroundImage: `url(${setBackgroundImage()})`, backgroundSize: '150%', backgroundRepeat: 'no-repeat'}}>
+      <p className={`weather-item ${fontColor.current}`} id='datetime-txt'>{date} {time}</p>
+      <p className={`weather-item ${fontColor.current}`}>{city.name}, {city.country}</p>
+      <p className={`weather-item ${fontColor.current}`}>{items[0].weather[0].description}</p>
+      <p className={`weather-item ${fontColor.current}`}>{tempToCelsius(items[0].main.temp)}&#8451;</p>
+      <Forecast items={items} time={time} tempToCelsius={tempToCelsius} fontColor={fontColor}/>
     </div>
   )
 }
