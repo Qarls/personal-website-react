@@ -25,7 +25,7 @@ const getApp = () => {
   return sessionStorage.getItem(CURRENT_APP_KEY)
 } 
 
-const [app, setApp] = useState(getApp);
+const [app, setApp] = useState(Number(getApp()));
 
 
 
