@@ -1,8 +1,5 @@
 import React from 'react'
 
-
-//function to return 5 divs with class name 'hourly-item'
-
 const Forecast = ({items, time, tempToCelsius, fontColor}) => {
 const timeIntervals = ['00:00', '03:00', '06:00', '09:00', '12:00', '15:00', '18:00', '21:00']
 const currentTime = timeIntervals.indexOf(time)
@@ -41,8 +38,6 @@ function hourlyTemps() {
     <div className={`weather-item ${fontColor.current}`} id='forecast-container'>
         <div className={`weather-item ${fontColor.current}`} id='forecast-hourly'>
             {hourlyDivs()}
-            
-
         </div>
         <div className={`weather-item ${fontColor.current}`} id='forecast-temps'>
             {hourlyTemps()}

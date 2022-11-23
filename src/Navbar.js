@@ -30,10 +30,6 @@ const Navbar = () => {
     setInitialPage()
   
   }, [view])
-  
-  
-
-
 
   const handleClick = (e) => {
     console.log(e.target.id)

@@ -13,7 +13,6 @@ const prevArrow = '<'
 //this component will contain the contents of the currently displayed page
 function Container({ views, view }) {
 
-
   function setImageBg() {
     document.getElementById('main').style.backgroundColor = null
     document.getElementById('main').style.backgroundImage = `url(${bg})`

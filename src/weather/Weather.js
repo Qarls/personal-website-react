@@ -2,10 +2,10 @@ import React, {useState, useEffect, useRef} from 'react'
 import brokenCloudsBg from '../res/brokenclouds.jpg';
 import overcastCloudsBg from '../res/overcastClouds.jpg';
 import Forecast from './Forecast';
+import Day from './Day';
 import clear from '../res/clear.jpg';
 import rain from '../res/rain.jpg';
 import snow from '../res/snow.jpg';
-
 
 const apiTest = require('../res/keys.json');
 const apiKeyTest = apiTest[0].openweathermap;
@@ -18,9 +18,9 @@ const Weather = () => {
   const [city, setCity] = useState('');
   const [items, setItems] = useState([]);
   const [time, setTimeString] = useState('');
+  const [timeProp, setTimeProp] = useState('');
   const [date, setDateString] = useState('');
   const fontColor = useRef('light');
-  
 
   useEffect(() => {
     fetch(apiLink)
@@ -32,10 +32,12 @@ const Weather = () => {
           setCity(result.city);
           setItems(result.list);
           setTimeString(result.list[0].dt_txt.slice(11, 16));
+          setTimeProp(result.list[0].dt_txt.slice(11, 13));
+          console.log(timeProp);
+
           console.log(time)
           setDateString(result.list[0].dt_txt.slice(0, 10));
 
-          
         },
 
         (error) => {
@@ -48,6 +50,7 @@ const Weather = () => {
   const tempToCelsius = (temp) => {
     return Math.round(temp - 273.15);
   }
+
 //TODO: add all images
   const setBackgroundImage = () => { 
     switch (items[0].weather[0].description) {
@@ -78,13 +81,10 @@ const Weather = () => {
         return brokenCloudsBg;
     }}
 
+//this is a function to test image size and position
 const setBackgroundImageTest = () => {
   return snow;
 }
-
-
-  
-
   if (error) {
     return <div>Error: {error.message}</div>;
   } else if (!isLoaded) {
@@ -93,12 +93,13 @@ const setBackgroundImageTest = () => {
     else {
       return (
 //CHECK IF NOT PASSING THE TEST FUNCTION BEFORE PUSHING TO PRODUCTION
-    <div className='weather' style={{backgroundImage: `url(${setBackgroundImage()})`, backgroundSize: '150%', backgroundRepeat: 'no-repeat'}}>
+    <div className='weather' style={{backgroundImage: `url(${setBackgroundImage()})`, backgroundSize: '200%', backgroundRepeat: 'no-repeat'}}>
       <p className={`weather-item ${fontColor.current}`} id='datetime-txt'>{date} {time}</p>
       <p className={`weather-item ${fontColor.current}`}>{city.name}, {city.country}</p>
       <p className={`weather-item ${fontColor.current}`}>{items[0].weather[0].description}</p>
       <p className={`weather-item ${fontColor.current}`}>{tempToCelsius(items[0].main.temp)}&#8451;</p>
       <Forecast items={items} time={time} tempToCelsius={tempToCelsius} fontColor={fontColor}/>
+      <Day items={items} date={date} timeProp={timeProp} tempToCelsius={tempToCelsius} fontColor={fontColor}/>
     </div>
   )
 }
