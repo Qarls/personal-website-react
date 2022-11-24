@@ -31,10 +31,21 @@ const Navbar = () => {
   
   }, [view])
 
+  const handleMouseOver = (e) => {
+    e.target.style.textShadow = '1px 1px 1px #ffffff'
+
+  }
+
+  const handleMouseOut = (e) => {
+    e.target.style.textShadow = 'none'
+  }
+
   const handleClick = (e) => {
-    console.log(e.target.id)
     switch (e.target.id) {
       case 'start':
+        setView(prevView => views.start)
+        break
+      case 'logo':
         setView(prevView => views.start)
         break
       case 'about':
@@ -54,14 +65,14 @@ const Navbar = () => {
 
   return (
     <> 
-    <img id='logo' src={logo} alt='logo'></img>
+    <img id='logo' src={logo} alt='logo' onClick={handleClick}></img>
     <div className='navbar' >
        <div className='bar'>
           <ul className='bar'>
-          <li id='start' onClick={handleClick} onMouseOver={{}}>START</li>
-          <li id='about' onClick={handleClick}>ABOUT</li>
-          <li id='gallery' onClick={handleClick}>GALLERY</li>
-          <li id='contact' onClick={handleClick}>CONTACT</li>
+          <li id='start' onClick={handleClick} onMouseOver={handleMouseOver} onMouseOut={handleMouseOut}>START</li>
+          <li id='about' onClick={handleClick} onMouseOver={handleMouseOver} onMouseOut={handleMouseOut}>ABOUT</li>
+          <li id='gallery' onClick={handleClick} onMouseOver={handleMouseOver} onMouseOut={handleMouseOut}>GALLERY</li>
+          <li id='contact' onClick={handleClick} onMouseOver={handleMouseOver} onMouseOut={handleMouseOut}>CONTACT</li>
         </ul>
        </div>
     </div>

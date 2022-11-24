@@ -28,18 +28,12 @@ const Weather = () => {
       .then(
         (result) => {
           setIsLoaded(true);
-          console.log(result);
           setCity(result.city);
           setItems(result.list);
           setTimeString(result.list[0].dt_txt.slice(11, 16));
           setTimeProp(result.list[0].dt_txt.slice(11, 13));
-          console.log(timeProp);
-
-          console.log(time)
           setDateString(result.list[0].dt_txt.slice(0, 10));
-
         },
-
         (error) => {
           setIsLoaded(true);
           setError(error);
@@ -63,16 +57,23 @@ const Weather = () => {
       case 'overcast clouds':
         fontColor.current = 'dark';
         return overcastCloudsBg;
-      case 'rain' || 'light rain' || 'drizzle':
+      case 'light rain':
         fontColor.current = 'light';
         return rain;
-      case 'snow' || 'light snow':
+      case 'rain':
+        fontColor.current = 'light';
+        return rain;
+      case 'snow':
+        fontColor.current = 'light';
+        return snow;
+      case 'light snow':
         fontColor.current = 'light';
         return snow;
       case 'Thunderstorm':
         return 'thunderstorm.jpg';
       case 'Drizzle':
-        return 'drizzle.jpg';
+        fontColor.current = 'light';
+        return rain;
       case 'Mist':
         return 'mist.jpg';
       case 'Fog':
@@ -93,13 +94,13 @@ const setBackgroundImageTest = () => {
     else {
       return (
 //CHECK IF NOT PASSING THE TEST FUNCTION BEFORE PUSHING TO PRODUCTION
-    <div className='weather' style={{backgroundImage: `url(${setBackgroundImage()})`, backgroundSize: '200%', backgroundRepeat: 'no-repeat'}}>
+    <div className='weather' style={{backgroundImage: `url(${setBackgroundImage()})`, backgroundSize: '360%', backgroundRepeat: 'no-repeat'}}>
       <p className={`weather-item ${fontColor.current}`} id='datetime-txt'>{date} {time}</p>
       <p className={`weather-item ${fontColor.current}`}>{city.name}, {city.country}</p>
       <p className={`weather-item ${fontColor.current}`}>{items[0].weather[0].description}</p>
-      <p className={`weather-item ${fontColor.current}`}>{tempToCelsius(items[0].main.temp)}&#8451;</p>
-      <Forecast items={items} time={time} tempToCelsius={tempToCelsius} fontColor={fontColor}/>
-      <Day items={items} date={date} timeProp={timeProp} tempToCelsius={tempToCelsius} fontColor={fontColor}/>
+      <p className={`weather-item ${fontColor.current}`} id='current-temp'>{tempToCelsius(items[0].main.temp)}&#8451;</p>
+      <Forecast items={items} time={time} tempToCelsius={tempToCelsius} fontColor={fontColor.current}/>
+      <Day items={items} date={date} timeProp={timeProp} tempToCelsius={tempToCelsius} fontColor={fontColor.current}/>
     </div>
   )
 }

@@ -58,6 +58,7 @@ img#logo {
   position: absolute;
   top: -10px;
   left: 5px;
+  cursor: pointer;
 }
 
 @media (max-width: 1000px) {
@@ -222,6 +223,13 @@ p#datetime-txt {
   flex-direction: column;
 }
 
+#current-temp {
+  font-size: 4.5vh;
+  margin: 0px;
+  margin-bottom: 0.5vh;
+  font-weight: lighter;
+}
+
 #forecast-hourly, #forecast-temps {
   display: flex;
   flex-direction: row;
@@ -234,8 +242,35 @@ p#datetime-txt {
   max-width: 80vw;
 }
 
+#forecast-temps {
+  gap: 1.2vw;
+}
+
 #forecast-hourly {
   gap: 1.5vw;
+}
+
+.daily-forecast {
+  margin-top: 0.5vh;
+}
+
+.day-item {
+  display: flex;
+  margin-left: auto;
+  margin-bottom: 0.8vh;
+
+}
+
+
+.day-item-temps {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0px;
+  padding: 0px;
+  margin-left: auto;
+  max-width: 80vw;
+  font-size: x-small;
 }
 
 .weather-item.dark {
@@ -245,7 +280,7 @@ p#datetime-txt {
 
 .weather-item.light {
   color: #FFFFFF;
-  font-weight: bold;
+  font-weight: lighter;
   letter-spacing: 0.2em;
 }
 

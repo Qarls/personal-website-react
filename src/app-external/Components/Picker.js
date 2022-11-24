@@ -51,7 +51,6 @@ const Picker = ({style, elementArray, arrayLen}) => {
       if (checkAvailable(elementIndex.text)) {
         updateUsedElements(prevElements => [...prevElements, elementArray[elementIndex].text])
         elementArray[elementIndex].used = true;
-        console.log(usedElements)
       }
   }
   }

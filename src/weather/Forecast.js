@@ -46,7 +46,6 @@ function hourlyTemps() {
   )
 }
 
-//set default props for fontColor
 Forecast.defaultProps = {
     fontColor: 'light'
 }
