@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/personal-website-react/static/css/main.65b354bb.css",
-    "main.js": "/personal-website-react/static/js/main.93619f6a.js",
+    "main.css": "/personal-website-react/static/css/main.c211323c.css",
+    "main.js": "/personal-website-react/static/js/main.4cf469bc.js",
     "static/media/overcastClouds.jpg": "/personal-website-react/static/media/overcastClouds.5413d695577ab9971c46.jpg",
     "static/media/bg2.jpg": "/personal-website-react/static/media/bg2.9b9d2d5ce9274803bd97.jpg",
     "static/media/brokenclouds.jpg": "/personal-website-react/static/media/brokenclouds.e61b00c06dc8454953fc.jpg",
@@ -15,11 +15,11 @@
     "static/media/social-iconsin.png": "/personal-website-react/static/media/social-iconsin.bd00caaf3a0fc463f36c.png",
     "static/media/social-iconsfb.png": "/personal-website-react/static/media/social-iconsfb.b3a7d4096da6728fc03b.png",
     "index.html": "/personal-website-react/index.html",
-    "main.65b354bb.css.map": "/personal-website-react/static/css/main.65b354bb.css.map",
-    "main.93619f6a.js.map": "/personal-website-react/static/js/main.93619f6a.js.map"
+    "main.c211323c.css.map": "/personal-website-react/static/css/main.c211323c.css.map",
+    "main.4cf469bc.js.map": "/personal-website-react/static/js/main.4cf469bc.js.map"
   },
   "entrypoints": [
-    "static/css/main.65b354bb.css",
-    "static/js/main.93619f6a.js"
+    "static/css/main.c211323c.css",
+    "static/js/main.4cf469bc.js"
   ]
 }
