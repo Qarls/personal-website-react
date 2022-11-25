@@ -94,7 +94,7 @@ const setBackgroundImageTest = () => {
     else {
       return (
 //CHECK IF NOT PASSING THE TEST FUNCTION BEFORE PUSHING TO PRODUCTION
-    <div className='weather' style={{backgroundImage: `url(${setBackgroundImage()})`, backgroundSize: '360%', backgroundRepeat: 'no-repeat'}}>
+    <div className='weather' style={{backgroundImage: `url(${setBackgroundImage()})`, backgroundSize: '200%', backgroundRepeat: 'no-repeat'}}>
       <p className={`weather-item ${fontColor.current}`} id='datetime-txt'>{date} {time}</p>
       <p className={`weather-item ${fontColor.current}`}>{city.name}, {city.country}</p>
       <p className={`weather-item ${fontColor.current}`}>{items[0].weather[0].description}</p>

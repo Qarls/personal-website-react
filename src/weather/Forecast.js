@@ -15,7 +15,7 @@ function hourlyDivs() {
     }
     cursor++;
     time = timeIntervals[cursor].slice(0, 2)    
-    divs.push(<div key={i} className={`weather-item ${fontColor}`}>{time}</div>)
+    divs.push(<div key={i} className={`weather-item ${fontColor}`}>{time}<span id='hourly-hours-mins'>:00</span></div>)
   }
 
   return divs
