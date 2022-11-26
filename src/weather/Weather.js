@@ -1,11 +1,12 @@
 import React, {useState, useEffect, useRef} from 'react'
 import brokenCloudsBg from '../res/brokenclouds.jpg';
-import overcastCloudsBg from '../res/overcastClouds.jpg';
+import overcastCloudsBg from '../res/overcast.jpg';
 import Forecast from './Forecast';
 import Day from './Day';
 import clear from '../res/clear.jpg';
 import rain from '../res/rain.jpg';
-import snow from '../res/snow.jpg';
+import snow from '../res/snowfall.jpg';
+import fog from '../res/fog.jpg';
 
 const apiTest = require('../res/keys.json');
 const apiKeyTest = apiTest[0].openweathermap;
@@ -74,10 +75,10 @@ const Weather = () => {
       case 'Drizzle':
         fontColor.current = 'light';
         return rain;
-      case 'Mist':
-        return 'mist.jpg';
-      case 'Fog':
-        return 'fog.jpg';
+      case 'mist':
+        return fog;
+      case 'fog':
+        return fog;
       default:
         return brokenCloudsBg;
     }}
